@@ -82,7 +82,7 @@ Important: The correct import is from Karboai import KarboAI (with capital K).
 Create a file test.py:
 
 ```python
-from karboai import KarboAI
+from Karboai import KarboAI
 
 api = KarboAI()
 
