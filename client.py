@@ -3,8 +3,8 @@ import requests
 from .constants import BASE_URL, DEFAULT_HEADERS
 from .exceptions import RequestError
 
-from .community import CommunityAPI
-from .blogs import BlogsAPI
+from  community import CommunityAPI
+from  blogs import BlogsAPI
 
 
 class KarboAI:
