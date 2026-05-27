@@ -11,7 +11,7 @@ Developed by Hisoka.
 ## Install from GitHub
 
 ```bash
-pip install git+https://github.com/YOUR_USERNAME/karboai.git
+pip install git+https://github.com/Zaicock/KarboAI.git
 ```
 
 ---
