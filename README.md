@@ -25,8 +25,6 @@ Download the project ZIP from GitHub and extract it.
 Project structure:
 
 ```bash
-karboai/
-│
 ├── karboai/
 ├── examples/
 ├── setup.py
