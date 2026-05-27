@@ -5,7 +5,7 @@ from .exceptions import RequestError
 
 from .community import CommunityAPI
 from .blogs import BlogsAPI
-
+from .user import UserAPI
 
 class KarboAI:
     def __init__(self, timeout=30):
