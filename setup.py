@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="karboAI",
+    name="karboai",
     version="1.0.0",
     author="Hisoka",
     description="KarboAI Python SDK",
