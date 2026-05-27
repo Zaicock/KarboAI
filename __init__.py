@@ -1,4 +1,4 @@
-from .client import KarboAI
+from client import KarboAI
 
 __version__ = "1.0.0"
 __author__ = "Hisoka"
