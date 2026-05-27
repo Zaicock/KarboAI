@@ -82,7 +82,7 @@ Important: The correct import is from Karboai import KarboAI (with capital K).
 Create a file test.py:
 
 ```python
-from Karboai import KarboAI
+from karboai import KarboAI
 
 api = KarboAI()
 
@@ -97,6 +97,14 @@ print(feed)
 # Get featured blogs
 blogs = api.blogs.featured(community_id=17)
 print(blogs)
+
+# Get user info
+user = api.user.get(user_id="12345", community_id="17")
+print(user)
+
+# Resolve username → user info
+resolved = api.user.resolve("test_user")
+print(resolved)
 ```
 
 Run the script:
@@ -141,6 +149,7 @@ api = KarboAI(api_key="your_api_key_here")
 
 ```python
 print(dir(api.community))
+print(dir(api.user))
 print(dir(api.blogs))
 ```
 
