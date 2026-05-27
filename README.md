@@ -1,4 +1,9 @@
-# KarboAI
+Here is the complete file containing everything (Windows + Android installation, usage examples, and original library functions) in one full text, ready to copy.
+
+---
+
+```markdown
+# KarboAI - Official Python SDK
 
 Official Python SDK for KarboAI APIs.
 
@@ -6,112 +11,95 @@ Developed by Hisoka.
 
 ---
 
-# Installation
+## Installation
 
-## Install from GitHub
+### Windows Installation
+
+#### Install from GitHub
 
 ```bash
 pip install git+https://github.com/Zaicock/KarboAI.git
 ```
 
----
-
-# Local Installation (Android / Pydroid 3)
-
-## 1. Download Project
-
-Download the project ZIP from GitHub and extract it.
-
-Project structure:
+Or install manually
 
 ```bash
-├── karboai/
-├── examples/
-├── setup.py
-├── requirements.txt
-└── README.md
+git clone https://github.com/Zaicock/KarboAI.git
+cd KarboAI
+pip install .
+```
+
+Test installation
+
+```bash
+python -c "from Karboai import KarboAI; print('Success')"
 ```
 
 ---
 
-## 2. Install Pydroid 3
+Android Installation (Pydroid 3)
 
-Download:
+Note: Pydroid 3 does not include git. Install manually.
 
-https://play.google.com/store/apps/details?id=ru.iiec.pydroid3
+1. Download the project
 
----
+Download the ZIP file from:
+https://github.com/Zaicock/KarboAI
 
-## 3. Install Required Package
+Extract it to a folder, for example:
+/storage/emulated/0/400/Application/KarboAI-main
 
-Open Pydroid Terminal and run:
+2. Open Terminal in Pydroid and navigate to the folder
+
+```bash
+cd /storage/emulated/0/400/Application/KarboAI-main
+```
+
+3. Install requests
 
 ```bash
 pip install requests
 ```
 
----
-
-## 4. Go To Project Folder
-
-Example:
-
-```bash
-cd /storage/emulated/0/Download/karboai
-```
-
----
-
-## 5. Install KarboAI Locally
+4. Install the library locally
 
 ```bash
 pip install .
 ```
 
-If installed successfully you will see:
+5. Test the installation
 
 ```bash
-Successfully installed karboai
+python -c "from Karboai import KarboAI; print('Success')"
 ```
 
 ---
 
-# Usage Example
+Usage Example
 
-Create file:
+Important: The correct import is from Karboai import KarboAI (with capital K).
 
-```bash
-test.py
-```
-
-Code:
+Create a file test.py:
 
 ```python
-from karboai import KarboAI
+from Karboai import KarboAI
 
 api = KarboAI()
 
 # Get all communities
 communities = api.community.all()
-
 print(communities)
 
 # Get community feed
-feed = api.community.feed(
-    community_id=17
-)
-
+feed = api.community.feed(community_id=17)
 print(feed)
 
 # Get featured blogs
-blogs = api.blogs.featured(
-    community_id=17
-)
-
+blogs = api.blogs.featured(community_id=17)
 print(blogs)
 ```
 
-Run:
+Run the script:
 
 ```bash
 python test.py
@@ -119,23 +107,55 @@ python test.py
 
 ---
 
-# Features
+Original Library Functions
 
-- Community APIs
-- Blogs APIs
-- Clean Structure
-- Easy To Use
-- Expandable
-- Mobile Friendly
+Community APIs
+
+Function Description
+api.community.all() Returns all communities
+api.community.feed(community_id) Returns feed of a specific community
+
+Blogs APIs
+
+Function Description
+api.blogs.featured(community_id) Returns featured blogs for a community
+
+General
+
+Function / Attribute Description
+KarboAI() Initialize the API client
+api.community Access community-related endpoints
+api.blogs Access blogs-related endpoints
 
 ---
 
-# Author
+Notes
+
+· If you get an authentication error (401), the API may require an API key. Try:
+
+```python
+api = KarboAI(api_key="your_api_key_here")
+```
+
+· Explore available methods using:
+
+```python
+print(dir(api.community))
+print(dir(api.blogs))
+```
+
+---
+
+License
+
+MIT
+
+Author
 
 Hisoka
 
+```
+
 ---
 
-# License
-
-MIT
+Copy the entire block above and save it as `README.md` or `INSTALL.txt`. This file contains everything needed for both Windows and Android users.
